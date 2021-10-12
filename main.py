@@ -16,4 +16,7 @@ w = observation.weather
 
 temp = w.temperature('celsius')['temp']
 status = w.detailed_status
-print(str(temp) + ', ' + str(status))
+wind = w.wind()['speed']
+humidity = w.humidity
+
+print(str(temp) + ', ' + str(status) + ', ' + 'влажность: ' + str(humidity))
